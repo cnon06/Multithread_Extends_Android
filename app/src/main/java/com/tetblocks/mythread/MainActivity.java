@@ -14,31 +14,17 @@ public class MainActivity extends AppCompatActivity {
     public void start(View v)
     {
 
-        new Thread(){
+         RunnableDemo R1 = new RunnableDemo( "Thread-1");
+        R1.start();
 
-            @Override
-            public void run() {
+        RunnableDemo R2 = new RunnableDemo( "Thread-2");
+        R2.start();
 
-                int i=0;
 
-                try
-                {
 
-                    while (i<10)
-                    {
-                        sleep(1000);
-                        Log.d("",i+"");
-                        i++;
-                    }
 
-                }
-                catch (Exception ed)
-                {
-                    System.out.println("Error code 10:"+ed);
-                }
-            }
-        }.start();
         Toast.makeText(this,"Thread is started.",Toast.LENGTH_SHORT).show();
+     //   System.out.println("Deneme1 Deneme1");
     }
 
 
