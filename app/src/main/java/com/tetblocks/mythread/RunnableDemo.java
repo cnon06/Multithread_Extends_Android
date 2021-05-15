@@ -1,6 +1,6 @@
 package com.tetblocks.mythread;
 
-class RunnableDemo implements Runnable {
+class RunnableDemo extends Thread {
     private Thread t;
     private String threadName;
 
